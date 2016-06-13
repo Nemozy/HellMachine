@@ -81,6 +81,7 @@ public class StageEnvironment : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
+        //Pause();
         GAME_OVER = true;
 
         GameObject.Find("Interface").transform.Find("Message").GetComponent<MessageController>().SetMessage(
