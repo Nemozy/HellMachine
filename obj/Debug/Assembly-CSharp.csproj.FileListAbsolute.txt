@@ -1,0 +1,41 @@
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Assembly-CSharp.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\UnityEditor.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\UnityEngine.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\UnityEngine.UI.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Mono.Cecil.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Unity.DataContract.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Unity.CecilTools.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\UnityEngine.xml
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\UnityEditor.xml
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\UnityEngine.UI.xml
+D:\UnityProjects\Hell machine\Hell machine\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\UnityProjects\Hell machine\Hell machine\obj\Debug\Assembly-CSharp.dll
+D:\UnityProjects\Hell machine\Hell machine\obj\Debug\Assembly-CSharp.pdb
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Assembly-CSharp.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\UnityProjects\HellMachine\Temp\bin\Debug\UnityEditor.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\UnityEngine.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\UnityEngine.UI.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Mono.Cecil.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Unity.DataContract.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Unity.CecilTools.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+D:\UnityProjects\HellMachine\Temp\bin\Debug\UnityEngine.xml
+D:\UnityProjects\HellMachine\Temp\bin\Debug\UnityEditor.xml
+D:\UnityProjects\HellMachine\Temp\bin\Debug\UnityEngine.UI.xml
+D:\UnityProjects\HellMachine\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\UnityProjects\HellMachine\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\UnityProjects\HellMachine\obj\Debug\Assembly-CSharp.dll
+D:\UnityProjects\HellMachine\obj\Debug\Assembly-CSharp.pdb

@@ -1,0 +1,610 @@
+fileFormatVersion: 2
+guid: a02e569a6d298814cacb3ea3096ba7f8
+timeCreated: 1465517762
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SpriteSheet_HeroShip_0
+    21300002: SpriteSheet_HeroShip_1
+    21300004: SpriteSheet_HeroShip_2
+    21300006: SpriteSheet_HeroShip_3
+    21300008: SpriteSheet_HeroShip_4
+    21300010: SpriteSheet_HeroShip_5
+    21300012: SpriteSheet_HeroShip_6
+    21300014: SpriteSheet_HeroShip_7
+    21300016: SpriteSheet_HeroShip_8
+    21300018: SpriteSheet_HeroShip_9
+    21300020: SpriteSheet_HeroShip_10
+    21300022: SpriteSheet_HeroShip_11
+    21300024: SpriteSheet_HeroShip_12
+    21300026: SpriteSheet_HeroShip_13
+    21300028: SpriteSheet_HeroShip_14
+    21300030: SpriteSheet_HeroShip_15
+    21300032: SpriteSheet_HeroShip_16
+    21300034: SpriteSheet_HeroShip_17
+    21300036: SpriteSheet_HeroShip_18
+    21300038: SpriteSheet_HeroShip_19
+    21300040: SpriteSheet_HeroShip_20
+    21300042: SpriteSheet_HeroShip_21
+    21300044: SpriteSheet_HeroShip_22
+    21300046: SpriteSheet_HeroShip_23
+    21300048: SpriteSheet_HeroShip_24
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SpriteSheet_HeroShip_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: -28, y: -32}
+        - {x: -28, y: -30}
+        - {x: -30, y: -28}
+        - {x: -32, y: -28}
+      - - {x: -18, y: -32}
+        - {x: -13, y: -32}
+        - {x: -13, y: -30}
+        - {x: -15, y: -28}
+        - {x: -18, y: -29}
+      - - {x: 24, y: 21}
+        - {x: 10, y: 31}
+        - {x: -11, y: 31}
+        - {x: -20, y: 27}
+        - {x: -32, y: 16}
+        - {x: -32, y: -17}
+        - {x: -20, y: -32}
+        - {x: 20, y: -32}
+        - {x: 30, y: -18}
+        - {x: 32, y: -7}
+        - {x: 32, y: 13}
+      - - {x: 29, y: -25}
+        - {x: 23, y: -29}
+        - {x: 23, y: -30}
+        - {x: 24, y: -32}
+        - {x: 31, y: -32}
+        - {x: 32, y: -31}
+        - {x: 32, y: -25}
+      - - {x: -32, y: -19}
+        - {x: -30, y: -19}
+        - {x: -28, y: -17}
+        - {x: -29, y: -14}
+        - {x: -32, y: -14}
+      - - {x: 28, y: -12}
+        - {x: 29, y: -15}
+        - {x: 32, y: -15}
+        - {x: 32, y: -10}
+        - {x: 30, y: -10}
+      - - {x: 28, y: 17}
+        - {x: 29, y: 14}
+        - {x: 32, y: 14}
+        - {x: 32, y: 19}
+        - {x: 30, y: 19}
+      - - {x: -32, y: 25}
+        - {x: -30, y: 25}
+        - {x: -28, y: 27}
+        - {x: -29, y: 30}
+        - {x: -32, y: 30}
+      - - {x: 21, y: 27}
+        - {x: 23, y: 25}
+        - {x: 26, y: 26}
+        - {x: 26, y: 29}
+        - {x: 24, y: 31}
+        - {x: 21, y: 30}
+      - - {x: 28, y: 32}
+        - {x: 29, y: 29}
+        - {x: 32, y: 29}
+        - {x: 32, y: 32}
+    - name: SpriteSheet_HeroShip_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: 32}
+        - {x: -32, y: 32}
+        - {x: -32, y: -27}
+        - {x: -21, y: -32}
+        - {x: 15, y: -32}
+        - {x: 30, y: -2}
+        - {x: 30, y: 19}
+      - - {x: 23, y: -29}
+        - {x: 26, y: -28}
+        - {x: 26, y: -25}
+        - {x: 23, y: -24}
+        - {x: 21, y: -26}
+      - - {x: 24, y: 30}
+        - {x: 24, y: 32}
+        - {x: 19, y: 32}
+        - {x: 21, y: 29}
+    - name: SpriteSheet_HeroShip_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -25}
+        - {x: -32, y: -32}
+        - {x: -29, y: -32}
+        - {x: -28, y: -31}
+        - {x: -28, y: -27}
+        - {x: -30, y: -25}
+      - - {x: -18, y: -31}
+        - {x: -17, y: -32}
+        - {x: -13, y: -32}
+        - {x: -13, y: -29}
+        - {x: -15, y: -27}
+        - {x: -18, y: -28}
+      - - {x: 21, y: 32}
+        - {x: -21, y: 32}
+        - {x: -32, y: 25}
+        - {x: -32, y: -8}
+        - {x: -12, y: -32}
+        - {x: 21, y: -32}
+        - {x: 32, y: -4}
+        - {x: 32, y: 16}
+        - {x: 26, y: 27}
+      - - {x: 24, y: -24}
+        - {x: 23, y: -27}
+        - {x: 23, y: -28}
+        - {x: 27, y: -32}
+        - {x: 31, y: -32}
+        - {x: 31, y: -28}
+        - {x: 27, y: -24}
+      - - {x: -32, y: -15}
+        - {x: -30, y: -15}
+        - {x: -28, y: -13}
+        - {x: -29, y: -10}
+        - {x: -32, y: -10}
+      - - {x: -32, y: 32}
+        - {x: -32, y: 29}
+        - {x: -30, y: 29}
+        - {x: -28, y: 31}
+        - {x: -28, y: 32}
+      - - {x: 26, y: 30}
+        - {x: 26, y: 32}
+        - {x: 21, y: 32}
+        - {x: 23, y: 29}
+    - name: SpriteSheet_HeroShip_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -25}
+        - {x: -32, y: -32}
+        - {x: -27, y: -32}
+        - {x: -27, y: -27}
+        - {x: -28, y: -25}
+      - - {x: -17, y: -31}
+        - {x: -16, y: -32}
+        - {x: -12, y: -32}
+        - {x: -12, y: -29}
+        - {x: -14, y: -27}
+        - {x: -17, y: -28}
+      - - {x: 32, y: 32}
+        - {x: -26, y: 32}
+        - {x: -32, y: 24}
+        - {x: -32, y: -6}
+        - {x: -10, y: -32}
+        - {x: 18, y: -32}
+        - {x: 32, y: -4}
+      - - {x: 25, y: -24}
+        - {x: 24, y: -27}
+        - {x: 24, y: -28}
+        - {x: 28, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: -28}
+        - {x: 28, y: -24}
+      - - {x: -32, y: -11}
+        - {x: -32, y: -15}
+        - {x: -29, y: -15}
+        - {x: -27, y: -13}
+        - {x: -28, y: -10}
+        - {x: -31, y: -10}
+      - - {x: -32, y: 32}
+        - {x: -32, y: 29}
+        - {x: -29, y: 29}
+        - {x: -27, y: 31}
+        - {x: -27, y: 32}
+      - - {x: 27, y: 30}
+        - {x: 27, y: 32}
+        - {x: 22, y: 32}
+        - {x: 24, y: 29}
+    - name: SpriteSheet_HeroShip_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 32}
+        - {x: -15, y: 29}
+        - {x: -32, y: 20}
+        - {x: -32, y: 3}
+        - {x: -30, y: 0}
+        - {x: -23, y: -12}
+        - {x: -16, y: -12}
+        - {x: -5, y: -32}
+        - {x: 25, y: -32}
+        - {x: 32, y: -11}
+        - {x: 32, y: 25}
+        - {x: 17, y: 32}
+      - - {x: -32, y: -27}
+        - {x: -32, y: -29}
+        - {x: -31, y: -31}
+        - {x: -28, y: -31}
+        - {x: -26, y: -30}
+        - {x: -26, y: -27}
+        - {x: -28, y: -25}
+        - {x: -30, y: -25}
+      - - {x: 27, y: -29}
+        - {x: 30, y: -28}
+        - {x: 30, y: -25}
+        - {x: 27, y: -24}
+        - {x: 25, y: -26}
+      - - {x: -32, y: -12}
+        - {x: -31, y: -15}
+        - {x: -28, y: -15}
+        - {x: -26, y: -13}
+        - {x: -27, y: -10}
+        - {x: -30, y: -10}
+      - - {x: -32, y: 32}
+        - {x: -31, y: 29}
+        - {x: -28, y: 29}
+        - {x: -26, y: 31}
+        - {x: -26, y: 32}
+      - - {x: 28, y: 30}
+        - {x: 28, y: 32}
+        - {x: 23, y: 32}
+        - {x: 25, y: 29}
+    - name: SpriteSheet_HeroShip_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 29}
+        - {x: -22, y: 27}
+        - {x: -32, y: 14}
+        - {x: -32, y: -16}
+        - {x: -18, y: -32}
+        - {x: 20, y: -32}
+        - {x: 32, y: -20}
+        - {x: 32, y: 13}
+        - {x: 18, y: 29}
+      - - {x: 28, y: -29}
+        - {x: 28, y: -31}
+        - {x: 29, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: -27}
+        - {x: 30, y: -27}
+      - - {x: -32, y: -21}
+        - {x: -30, y: -21}
+        - {x: -28, y: -19}
+        - {x: -29, y: -16}
+        - {x: -32, y: -16}
+      - - {x: 28, y: -14}
+        - {x: 29, y: -17}
+        - {x: 32, y: -17}
+        - {x: 32, y: -12}
+        - {x: 30, y: -12}
+      - - {x: 28, y: 15}
+        - {x: 29, y: 12}
+        - {x: 32, y: 12}
+        - {x: 32, y: 17}
+        - {x: 30, y: 17}
+      - - {x: -32, y: 23}
+        - {x: -30, y: 23}
+        - {x: -28, y: 25}
+        - {x: -29, y: 28}
+        - {x: -32, y: 28}
+      - - {x: 21, y: 25}
+        - {x: 23, y: 23}
+        - {x: 26, y: 24}
+        - {x: 26, y: 27}
+        - {x: 24, y: 29}
+        - {x: 21, y: 28}
+      - - {x: 28, y: 30}
+        - {x: 29, y: 27}
+        - {x: 32, y: 27}
+        - {x: 32, y: 32}
+        - {x: 30, y: 32}
+      - - {x: -9, y: 32}
+        - {x: -9, y: 30}
+        - {x: -8, y: 28}
+        - {x: 8, y: 28}
+        - {x: 9, y: 31}
+        - {x: 9, y: 32}
+    - name: SpriteSheet_HeroShip_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: -31}
+        - {x: 8, y: -32}
+        - {x: 12, y: -32}
+        - {x: 12, y: -28}
+        - {x: 10, y: -26}
+        - {x: 7, y: -27}
+      - - {x: 23, y: -31}
+        - {x: 26, y: -30}
+        - {x: 26, y: -27}
+        - {x: 23, y: -26}
+        - {x: 21, y: -28}
+      - - {x: -20, y: 32}
+        - {x: -32, y: 21}
+        - {x: -32, y: -7}
+        - {x: -30, y: -12}
+        - {x: -22, y: -29}
+        - {x: 28, y: -29}
+        - {x: 30, y: -28}
+        - {x: 30, y: 18}
+        - {x: 18, y: 32}
+      - - {x: 21, y: 27}
+        - {x: 24, y: 28}
+        - {x: 24, y: 31}
+        - {x: 21, y: 32}
+        - {x: 19, y: 30}
+    - name: SpriteSheet_HeroShip_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -32}
+        - {x: -28, y: -32}
+        - {x: -28, y: -29}
+        - {x: -30, y: -27}
+        - {x: -32, y: -27}
+      - - {x: -13, y: -32}
+        - {x: -13, y: -30}
+        - {x: -16, y: -29}
+        - {x: -18, y: -32}
+      - - {x: 9, y: -29}
+        - {x: 6, y: -29}
+        - {x: 8, y: -29}
+        - {x: 11, y: -25}
+        - {x: 27, y: -14}
+        - {x: 32, y: -4}
+        - {x: 32, y: 14}
+        - {x: 26, y: 25}
+        - {x: 18, y: 32}
+        - {x: -17, y: 32}
+        - {x: -32, y: 23}
+        - {x: -32, y: -12}
+        - {x: -14, y: -32}
+        - {x: 16, y: -32}
+        - {x: 16, y: -31}
+        - {x: 12, y: -26}
+        - {x: 11, y: -26}
+      - - {x: 24, y: -26}
+        - {x: 23, y: -27}
+        - {x: 23, y: -29}
+        - {x: 25, y: -32}
+        - {x: 31, y: -32}
+        - {x: 31, y: -30}
+        - {x: 26, y: -26}
+      - - {x: -32, y: -17}
+        - {x: -30, y: -17}
+        - {x: -28, y: -15}
+        - {x: -29, y: -12}
+        - {x: -32, y: -12}
+      - - {x: -32, y: 27}
+        - {x: -30, y: 27}
+        - {x: -28, y: 29}
+        - {x: -29, y: 32}
+        - {x: -32, y: 32}
+      - - {x: 23, y: 27}
+        - {x: 26, y: 28}
+        - {x: 26, y: 31}
+        - {x: 23, y: 32}
+        - {x: 21, y: 30}
+    - name: SpriteSheet_HeroShip_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: -28}
+        - {x: -32, y: -32}
+        - {x: -27, y: -32}
+        - {x: -27, y: -29}
+        - {x: -29, y: -27}
+        - {x: -31, y: -27}
+      - - {x: -12, y: -32}
+        - {x: -12, y: -30}
+        - {x: -15, y: -29}
+        - {x: -17, y: -32}
+      - - {x: 3, y: -32}
+        - {x: 3, y: -30}
+        - {x: 0, y: -29}
+        - {x: -2, y: -32}
+      - - {x: 10, y: -31}
+        - {x: 11, y: -32}
+        - {x: 17, y: -32}
+        - {x: 17, y: -31}
+        - {x: 13, y: -26}
+        - {x: 10, y: -27}
+      - - {x: 25, y: -26}
+        - {x: 24, y: -27}
+        - {x: 24, y: -29}
+        - {x: 26, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: -30}
+        - {x: 27, y: -26}
+      - - {x: 12, y: 32}
+        - {x: -8, y: 32}
+        - {x: -32, y: 25}
+        - {x: -32, y: -20}
+        - {x: -28, y: -29}
+        - {x: 17, y: -29}
+        - {x: 32, y: -10}
+        - {x: 32, y: 19}
+        - {x: 27, y: 25}
+      - - {x: -32, y: -13}
+        - {x: -32, y: -17}
+        - {x: -29, y: -17}
+        - {x: -27, y: -15}
+        - {x: -28, y: -12}
+        - {x: -31, y: -12}
+      - - {x: -32, y: 31}
+        - {x: -32, y: 27}
+        - {x: -29, y: 27}
+        - {x: -27, y: 29}
+        - {x: -28, y: 32}
+        - {x: -31, y: 32}
+      - - {x: 24, y: 27}
+        - {x: 27, y: 28}
+        - {x: 27, y: 31}
+        - {x: 24, y: 32}
+        - {x: 22, y: 30}
+    - name: SpriteSheet_HeroShip_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: -27}
+        - {x: -32, y: -29}
+        - {x: -32, y: -31}
+        - {x: -31, y: -32}
+        - {x: -27, y: -32}
+        - {x: -26, y: -31}
+        - {x: -26, y: -29}
+        - {x: -28, y: -27}
+      - - {x: 11, y: -31}
+        - {x: 12, y: -32}
+        - {x: 16, y: -32}
+        - {x: 16, y: -28}
+        - {x: 14, y: -26}
+        - {x: 11, y: -27}
+      - - {x: 27, y: -31}
+        - {x: 30, y: -30}
+        - {x: 30, y: -27}
+        - {x: 27, y: -26}
+        - {x: 25, y: -28}
+      - - {x: -7, y: 32}
+        - {x: -32, y: 21}
+        - {x: -32, y: -9}
+        - {x: -16, y: -29}
+        - {x: 26, y: -29}
+        - {x: 32, y: -13}
+        - {x: 32, y: 26}
+        - {x: 17, y: 32}
+      - - {x: -32, y: -14}
+        - {x: -31, y: -17}
+        - {x: -28, y: -17}
+        - {x: -26, y: -15}
+        - {x: -27, y: -12}
+        - {x: -30, y: -12}
+      - - {x: -32, y: 30}
+        - {x: -31, y: 27}
+        - {x: -28, y: 27}
+        - {x: -26, y: 29}
+        - {x: -27, y: 32}
+        - {x: -30, y: 32}
+      - - {x: 25, y: 27}
+        - {x: 28, y: 28}
+        - {x: 28, y: 31}
+        - {x: 25, y: 32}
+        - {x: 23, y: 30}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
