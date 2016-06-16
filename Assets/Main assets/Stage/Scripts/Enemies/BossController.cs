@@ -103,7 +103,6 @@ public class BossController : EnemyController
             if (GameObject.Find("Ship"))
             {
                 GameObject.Find("Player").GetComponent<PlayerController>().AddScore(Score);
-                //GameObject.Find("Quest").SendMessage("KillAlien");
                 GameObject.Find("Exploy").GetComponent<AudioSource>().Play();
             }
             Destroy(this.gameObject);

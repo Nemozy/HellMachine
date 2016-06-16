@@ -130,10 +130,12 @@ public class HeroMovingController : MonoBehaviour
     {
         LEFT = param;
     }
+    
     public void GoRight(bool param)
     {
         RIGHT = param;
     }
+    
     public void GoGas(bool param)
     {
         GAS = param;

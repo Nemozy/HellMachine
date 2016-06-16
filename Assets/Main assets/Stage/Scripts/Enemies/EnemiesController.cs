@@ -96,6 +96,7 @@ public class EnemiesController : MonoBehaviour
         }
 	}
 
+    //Генерирует позицию и ротацию для спавна юнита 
     private void GeneratePosAndRotation(ref Vector3 vec, ref float rot)
     {
         Map map = GameObject.Find("Terrain").GetComponent<StageEnvironment>().GetMap();

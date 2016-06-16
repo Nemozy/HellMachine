@@ -21,6 +21,7 @@ public class Alien : EnemyController
         if (GameObject.Find("TopPanel").transform.Find("SettingsWindow").Find("GraphMode").GetComponent<UnityEngine.UI.Dropdown>().captionText.text.Equals("2D"))
             this.transform.Rotate(90, 0, 0);
     }
+
     protected override void TakeDamage(float dmg)
     {
         Hp -= dmg;

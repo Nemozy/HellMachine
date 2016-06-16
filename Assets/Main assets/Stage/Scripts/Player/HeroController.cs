@@ -79,6 +79,7 @@ public class HeroController : MonoBehaviour
         return Hp;
     }
 
+    //Получение урона
     public float TakeDamage(float dmg)
     {
         Hp -= dmg;

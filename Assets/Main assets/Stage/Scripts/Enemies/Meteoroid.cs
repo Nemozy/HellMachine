@@ -4,6 +4,7 @@ using System.Collections;
 public class Meteoroid : EnemyController
 {
     private Animator anim;
+
     void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -11,6 +12,7 @@ public class Meteoroid : EnemyController
             this.GetComponent<Renderer>().material.mainTexture = Resources.Load("Enemies/Meteoroids/Meteoroid_1/3D/Textures/Meteoroid_"+ Random.Range(1,6).ToString()) as Texture;
     }
 
+    //Инициализация
     public void Init(float Speed, float _Size, float _Score, float _Damage, float _Hp)
     {
         Size = _Size;
@@ -21,6 +23,7 @@ public class Meteoroid : EnemyController
         Initiate = true;
 	}
 
+    //Движение
     protected override void Move()
     {
         Vector3 vecPos = new Vector3(this.transform.up.x, this.transform.up.y, this.transform.up.z);
@@ -28,6 +31,7 @@ public class Meteoroid : EnemyController
         DestroyWhenOut();
     }
 
+    //Уничтожить объект после вылета за пределы видимости экрана
     private void DestroyWhenOut()
     {
         Map map = GameObject.Find("Terrain").GetComponent<StageEnvironment>().GetMap();
@@ -41,6 +45,7 @@ public class Meteoroid : EnemyController
         }
     }
 
+    //Получить урон
     protected override void TakeDamage(float dmg)
     {
         Hp -= dmg;

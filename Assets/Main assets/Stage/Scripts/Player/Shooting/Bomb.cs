@@ -34,12 +34,14 @@ public class Bomb : Bullet
             Exploy();
     }
 
+    //Взрыв
     private void Exploy()
     {
         GameObject.Find("Exploy").GetComponent<AudioSource>().Play();
         Destroy(this.gameObject);
     }
 
+    //Нанести урон
     protected override void Damage(GameObject obj)
     {
         if (obj.name.ToUpper().Contains("METEOROID") || obj.name.ToUpper().Contains("ALIEN") || obj.name.ToUpper().Contains("BOSS"))

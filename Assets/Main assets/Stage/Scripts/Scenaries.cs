@@ -37,6 +37,7 @@ public class Scenaries : MonoBehaviour
         }
     }
 
+    //Убийство инопланетян (квест 2)
     public void KillAlien()
     {
         Aliens += 1;
@@ -44,6 +45,7 @@ public class Scenaries : MonoBehaviour
             GetFirstBomb();
     }
 
+    //Предупреждение о приходе босса (квест 3)
     public void GetFirstBoss()
     {
         ShowBossMessage = true;
@@ -55,6 +57,7 @@ public class Scenaries : MonoBehaviour
         this.transform.Find("QuestMessage").gameObject.SetActive(true);
     }
 
+    //Убийство первого инопланетянина (квест 1)
     public void GetFirstBomb()
     {
         KillFirstAlien = true;

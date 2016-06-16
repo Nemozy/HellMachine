@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
         DestroyWhenOut();
     }
 
+    //Уничтожить после вылета за пределы видимости 
     private void DestroyWhenOut()
     {
         Map map = GameObject.Find("Terrain").GetComponent<StageEnvironment>().GetMap();
@@ -38,6 +39,7 @@ public class Bullet : MonoBehaviour
             Damage(col.gameObject);
     }
 
+    //Нанести урон
     protected virtual void Damage(GameObject obj)
     {
         if (obj.name.ToUpper().Contains("METEOROID") || obj.name.ToUpper().Contains("ALIEN") || obj.name.ToUpper().Contains("BOSS"))

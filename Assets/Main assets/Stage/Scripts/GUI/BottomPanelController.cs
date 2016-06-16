@@ -27,12 +27,14 @@ public class BottomPanelController : MonoBehaviour
         }
 	}
 
+    //Обновить информацию о количестве зарядов лазера
     public void UpdateLaserState()
     {
         this.transform.Find("IcoLaser").Find("Text").GetComponent<UnityEngine.UI.Text>().text = "Laser\n" + "x" +
             GameObject.Find("Player").transform.Find("Ship").GetComponent<Shooting>().GetLaserAmmo().ToString();
     }
 
+    //Обновить информацию о количестве зарядов бомб
     public void UpdateBombState()
     {
         this.transform.Find("IcoBomb").Find("Text").GetComponent<UnityEngine.UI.Text>().text = "Bomb\n" + "x" +

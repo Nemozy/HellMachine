@@ -15,17 +15,20 @@ public class MessageController : MonoBehaviour
         }
     }
 
+    //Показать текст сообщения
     public void SetMessage(string message)
     {
         this.gameObject.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text = message;
     }
 
+    //Скрыть окно сообщения
     public void Hide()
     {
         TimerShow = 0;
         this.gameObject.SetActive(false);
     }
 
+    //Показать окно сообщения
     public void Show(float time)
     {
         TimerShow = time;
