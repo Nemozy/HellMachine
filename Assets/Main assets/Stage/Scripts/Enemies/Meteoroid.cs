@@ -3,8 +3,20 @@ using System.Collections;
 
 public class Meteoroid : EnemyController
 {
-	public void Init(float Speed) 
+    private Animator anim;
+    void Start()
     {
+        anim = this.GetComponent<Animator>();
+        if(this.GetComponent<Renderer>())
+            this.GetComponent<Renderer>().material.mainTexture = Resources.Load("Enemies/Meteoroids/Meteoroid_1/3D/Textures/Meteoroid_"+ Random.Range(1,6).ToString()) as Texture;
+    }
+
+    public void Init(float Speed, float _Size, float _Score, float _Damage, float _Hp)
+    {
+        Size = _Size;
+        Score = _Score;
+        Damage = _Damage;
+        Hp = _Hp;
         MovSpeed = Speed;
         Initiate = true;
 	}
@@ -29,25 +41,36 @@ public class Meteoroid : EnemyController
         }
     }
 
-    protected override void TakeDamage()
+    protected override void TakeDamage(float dmg)
     {
-        if (this.gameObject.name.Equals("Meteoroid_Big"))
+        Hp -= dmg;
+        if (Hp <= 0)
         {
-            for (int i = 0; i < 3; i++)
+            GameObject.Find("Player").GetComponent<PlayerController>().AddScore(Score);
+            if (this.gameObject.name.Equals("Meteoroid_Big"))
             {
-                float rot = Random.Range(0f, 360f);
-                GameObject enemy = Instantiate((GameObject)Resources.Load("Enemies/Meteoroids/Meteoroid_1/" +
-                        GameObject.Find("TopPanel").transform.Find("SettingsWindow").Find("GraphMode").GetComponent<UnityEngine.UI.Dropdown>().captionText.text + "/Model/Meteoroid")) as GameObject;
-                enemy.transform.SetParent(GameObject.Find("Enemies").transform);
-                enemy.name = "Meteoroid_Small";
-                enemy.transform.localScale *= 0.5f;
-                enemy.transform.position = this.gameObject.transform.position;
-                if (GameObject.Find("TopPanel").transform.Find("SettingsWindow").Find("GraphMode").GetComponent<UnityEngine.UI.Dropdown>().captionText.text.Equals("3D"))
-                    enemy.transform.Rotate(90, rot, 0);
-                else
-                    enemy.transform.Rotate(0, 0, rot);
-                enemy.transform.GetComponent<Meteoroid>().Init(0.1f);
+                for (int i = 0; i < 3; i++)
+                {
+                    float rot = Random.Range(0f, 360f);
+                    GameObject enemy = Instantiate((GameObject)Resources.Load("Enemies/Meteoroids/Meteoroid_1/" +
+                            GameObject.Find("TopPanel").transform.Find("SettingsWindow").Find("GraphMode").GetComponent<UnityEngine.UI.Dropdown>().captionText.text + "/Model/Meteoroid")) as GameObject;
+                    enemy.transform.SetParent(GameObject.Find("Enemies").transform);
+                    enemy.name = "Meteoroid_Small";
+                    enemy.transform.localScale *= 0.5f;
+                    enemy.transform.position = this.gameObject.transform.position;
+                    if (GameObject.Find("TopPanel").transform.Find("SettingsWindow").Find("GraphMode").GetComponent<UnityEngine.UI.Dropdown>().captionText.text.Equals("3D"))
+                        enemy.transform.Rotate(90, rot, 0);
+                    else
+                        enemy.transform.Rotate(0, 0, rot);
+                    enemy.transform.GetComponent<Meteoroid>().Init(0.1f / 0.5f, Size * 0.5f, Score * 0.5f, Damage * 0.5f, Hp * 0.5f);
+                }
             }
+            GameObject.Find("Exploy").GetComponent<AudioSource>().Play();
+            this.transform.GetComponent<SphereCollider>().isTrigger = true;
+            if(anim) 
+                anim.SetBool("Exploy", true);
+            Destroy(this.gameObject,2);
         }
+        GameObject.Find("Bomb").GetComponent<AudioSource>().Play();
     }
 }

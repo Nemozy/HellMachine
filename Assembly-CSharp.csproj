@@ -50,26 +50,36 @@
      <Compile Include="Assets\Main assets\Library\GraphicsController.cs" />
      <Compile Include="Assets\Main assets\Library\Structs.cs" />
      <Compile Include="Assets\Main assets\Library\Unions.cs" />
+     <Compile Include="Assets\Main assets\Stage\Effects\Elementals\Scripts\OrbitCamera.cs" />
+     <Compile Include="Assets\Main assets\Stage\Effects\Elementals\Scripts\TestParticles.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\BonusController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\BonusCreator.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\CameraController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Enemies\Alien.cs" />
+     <Compile Include="Assets\Main assets\Stage\Scripts\Enemies\BossController.cs" />
+     <Compile Include="Assets\Main assets\Stage\Scripts\Enemies\BulletEnemy.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Enemies\EnemiesController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Enemies\Meteoroid.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\GUI\BottomPanelController.cs" />
+     <Compile Include="Assets\Main assets\Stage\Scripts\GUI\Button.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\GUI\GasolineController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\GUI\HelpController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\GUI\MessageController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\GUI\ScoreController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\GUI\SettingsWindowController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\GUI\TimeController.cs" />
+     <Compile Include="Assets\Main assets\Stage\Scripts\GUI\UIDetecter.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Map.cs" />
+     <Compile Include="Assets\Main assets\Stage\Scripts\Player\HeroController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Player\HeroMovingController.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Main assets\Stage\Scripts\Player\Shooting\Bomb.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Player\Shooting\Bullet.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Player\Shooting\Laser.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\Player\Shooting\Shooting.cs" />
+     <Compile Include="Assets\Main assets\Stage\Scripts\Scenaries.cs" />
      <Compile Include="Assets\Main assets\Stage\Scripts\StageEnvironment.cs" />
+     <None Include="Assets\Main assets\Stage\Effects\Elementals\!Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Downloads/Unity 5.3.4f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

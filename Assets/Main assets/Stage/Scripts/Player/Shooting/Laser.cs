@@ -21,11 +21,10 @@ public class Laser : Bullet
 
     protected override void Damage(GameObject obj)
     {
-        if (obj.name.ToUpper().Contains("METEOROID") || obj.name.ToUpper().Contains("ALIEN"))
+        if (obj.name.ToUpper().Contains("METEOROID") || obj.name.ToUpper().Contains("ALIEN") || obj.name.ToUpper().Contains("BOSS"))
         {
-            obj.SendMessage("TakeDamage");
-            Destroy(obj);
-            GameObject.Find("Player").GetComponent<PlayerController>().AddScore(1);
+            object parameter = Dmg;
+            obj.SendMessage("TakeDamage", parameter);
         }
     }
 }

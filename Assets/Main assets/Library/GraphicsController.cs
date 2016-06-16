@@ -14,32 +14,44 @@ public class GraphicsController : MonoBehaviour
         HeroShip.transform.position = OldHeroShip.transform.position;
         HeroShip.transform.rotation = OldHeroShip.transform.rotation;
         HeroShip.GetComponent<Shooting>().ShootingSettings = OldHeroShip.GetComponent<Shooting>().ShootingSettings;
-        HeroShip.GetComponent<HeroMovingController>().SetFixGasoline(OldHeroShip.GetComponent<HeroMovingController>().GetGasoline());
+        HeroShip.GetComponent<HeroController>().SetGas(OldHeroShip.GetComponent<HeroController>().GetGas());
         Destroy(OldHeroShip);
         #endregion
 
-        #region enemies switch=
+        #region enemies switch
         int countEnmy = GameObject.Find("Enemies").transform.childCount;
         for (int i = 0; i < countEnmy; i++)
         {
             GameObject OldEnemy = GameObject.Find("Enemies").transform.GetChild(i).gameObject;
             GameObject Enemy = null;
+            float sz = 0;
             if (OldEnemy.name.ToUpper().Contains("METEOROID"))
             {
                 Enemy = Instantiate((GameObject)Resources.Load("Enemies/Meteoroids/Meteoroid_1/3D/Model/Meteoroid")) as GameObject;
-                Enemy.GetComponent<Meteoroid>().Init(OldEnemy.GetComponent<Meteoroid>().MovSpeed);
+                Enemy.GetComponent<Meteoroid>().Init(OldEnemy.GetComponent<Meteoroid>().MovSpeed,
+                                                     OldEnemy.GetComponent<Meteoroid>().Size,
+                                                     OldEnemy.GetComponent<Meteoroid>().Score,
+                                                     OldEnemy.GetComponent<Meteoroid>().Damage,
+                                                     OldEnemy.GetComponent<Meteoroid>().Hp);
+                sz = OldEnemy.GetComponent<Meteoroid>().Size;
             }
             if (OldEnemy.name.ToUpper().Contains("ALIEN"))
             {
                 Enemy = Instantiate((GameObject)Resources.Load("Enemies/Alien/3D/Model/Alien")) as GameObject;
-                Enemy.GetComponent<Alien>().Init(OldEnemy.GetComponent<Alien>().MovSpeed);
+                Enemy.GetComponent<Alien>().Init(OldEnemy.GetComponent<Alien>().MovSpeed,
+                                                 OldEnemy.GetComponent<Alien>().Size,
+                                                 OldEnemy.GetComponent<Alien>().Score,
+                                                 OldEnemy.GetComponent<Alien>().Damage,
+                                                 OldEnemy.GetComponent<Alien>().Hp);
+                sz = OldEnemy.GetComponent<Alien>().Size;
             }
             Enemy.transform.SetParent(GameObject.Find("Enemies").transform);
             Enemy.name = OldEnemy.name;
             Enemy.transform.position = OldEnemy.transform.position;
             Enemy.transform.rotation = OldEnemy.transform.rotation;
+            Enemy.transform.localScale *= sz;
             if(Enemy.name.ToUpper().Contains("SMALL"))
-                Enemy.transform.localScale *= 0.5f;;
+                Enemy.transform.localScale *= 0.5f;
             Destroy(GameObject.Find("Enemies").transform.GetChild(i).gameObject);
         }
         #endregion enemies switch
@@ -77,7 +89,7 @@ public class GraphicsController : MonoBehaviour
         HeroShip.transform.position = OldHeroShip.transform.position;
         HeroShip.transform.rotation = OldHeroShip.transform.rotation;
         HeroShip.GetComponent<Shooting>().ShootingSettings = OldHeroShip.GetComponent<Shooting>().ShootingSettings;
-        HeroShip.GetComponent<HeroMovingController>().SetFixGasoline(OldHeroShip.GetComponent<HeroMovingController>().GetGasoline());
+        HeroShip.GetComponent<HeroController>().SetGas(OldHeroShip.GetComponent<HeroController>().GetGas());
         Destroy(OldHeroShip);
         #endregion
 
@@ -87,22 +99,34 @@ public class GraphicsController : MonoBehaviour
         {
             GameObject OldEnemy = GameObject.Find("Enemies").transform.GetChild(i).gameObject;
             GameObject Enemy = null;
+            float sz = 0;
             if (OldEnemy.name.ToUpper().Contains("METEOROID"))
             {
                 Enemy = Instantiate((GameObject)Resources.Load("Enemies/Meteoroids/Meteoroid_1/2D/Model/Meteoroid")) as GameObject;
-                Enemy.GetComponent<Meteoroid>().Init(OldEnemy.GetComponent<Meteoroid>().MovSpeed);
+                Enemy.GetComponent<Meteoroid>().Init(OldEnemy.GetComponent<Meteoroid>().MovSpeed,
+                                                     OldEnemy.GetComponent<Meteoroid>().Size,
+                                                     OldEnemy.GetComponent<Meteoroid>().Score,
+                                                     OldEnemy.GetComponent<Meteoroid>().Damage,
+                                                     OldEnemy.GetComponent<Meteoroid>().Hp);
+                sz = OldEnemy.GetComponent<Meteoroid>().Size;
             }
             if (OldEnemy.name.ToUpper().Contains("ALIEN"))
             {
                 Enemy = Instantiate((GameObject)Resources.Load("Enemies/Alien/2D/Model/Alien")) as GameObject;
-                Enemy.GetComponent<Alien>().Init(OldEnemy.GetComponent<Alien>().MovSpeed);
+                Enemy.GetComponent<Alien>().Init(OldEnemy.GetComponent<Alien>().MovSpeed,
+                                                 OldEnemy.GetComponent<Alien>().Size,
+                                                 OldEnemy.GetComponent<Alien>().Score,
+                                                 OldEnemy.GetComponent<Alien>().Damage,
+                                                 OldEnemy.GetComponent<Alien>().Hp);
+                sz = OldEnemy.GetComponent<Alien>().Size;
             }
             Enemy.transform.SetParent(GameObject.Find("Enemies").transform);
             Enemy.name = OldEnemy.name;
             Enemy.transform.position = OldEnemy.transform.position;
             Enemy.transform.rotation = OldEnemy.transform.rotation;
+            Enemy.transform.localScale *= sz;
             if (Enemy.name.ToUpper().Contains("SMALL"))
-                Enemy.transform.localScale *= 0.5f; ;
+                Enemy.transform.localScale *= 0.5f;
             Destroy(GameObject.Find("Enemies").transform.GetChild(i).gameObject);
         }
         #endregion enemies switch

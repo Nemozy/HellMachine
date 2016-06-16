@@ -23,6 +23,13 @@ public class BonusController : MonoBehaviour
         #region only 3D
         this.transform.Rotate(RotationAni * Time.deltaTime);
         #endregion only 3D
+
+        if (Vector3.Distance(this.gameObject.transform.position, GameObject.Find("Player").transform.Find("Ship").transform.position) < 30)
+        {
+            if (GameObject.FindGameObjectWithTag("PlayerShip"))
+                this.transform.LookAt(GameObject.FindGameObjectWithTag("PlayerShip").transform);
+            this.transform.position += new Vector3(this.transform.forward.x, this.transform.forward.y, this.transform.forward.z) * Time.deltaTime * 3f;
+        }
     }
 
     void OnCollisionEnter(Collision col)
@@ -53,7 +60,7 @@ public class BonusController : MonoBehaviour
                 GameObject.Find("Interface").transform.Find("Message").GetComponent<MessageController>().SetMessage("Increase shooting power");
                 GameObject.Find("Interface").transform.Find("Message").GetComponent<MessageController>().Show(2);
             }
-            GameObject.Find("Player").transform.Find("Ship").GetComponent<HeroMovingController>().AddGasoline(Gasoline);
+            GameObject.Find("Player").transform.Find("Ship").GetComponent<HeroController>().AddGas(Gasoline);
             Destroy(this.gameObject);
         }
     }

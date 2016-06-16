@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
-    private float MovSpeed = 0.7f;
-    private bool NonActive = false;
+    public float Dmg = 1;
+    protected float MovSpeed = 1.1f;
+    protected bool NonActive = false;
 
 	void Update () 
     {
@@ -39,12 +40,11 @@ public class Bullet : MonoBehaviour
 
     protected virtual void Damage(GameObject obj)
     {
-        if (obj.name.ToUpper().Contains("METEOROID") || obj.name.ToUpper().Contains("ALIEN"))
+        if (obj.name.ToUpper().Contains("METEOROID") || obj.name.ToUpper().Contains("ALIEN") || obj.name.ToUpper().Contains("BOSS"))
         {
             NonActive = true;
-            obj.SendMessage("TakeDamage");
-            Destroy(obj);
-            GameObject.Find("Player").GetComponent<PlayerController>().AddScore(1);
+            object parameter = Dmg;
+            obj.SendMessage("TakeDamage", parameter);
             Destroy(this.gameObject);
         }
     }

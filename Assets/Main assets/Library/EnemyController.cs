@@ -1,19 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyController : MonoBehaviour 
+public class EnemyController : MonoBehaviour
 {
+    public float Hp;
+    public float Damage;
+    public float Score;
+    public float Size;
     public float MovSpeed;
     public bool Initiate = false;
 
-	void Start ()
-    {
-	
-	}
-	
 	void Update () 
     {
-        if(Initiate && !GameObject.Find("Terrain").GetComponent<StageEnvironment>().GetPauseState())
+        if (Initiate && !GameObject.Find("Terrain").GetComponent<StageEnvironment>().GetPauseState())
             Move();
 	}
 
@@ -21,7 +20,16 @@ public class EnemyController : MonoBehaviour
     {
     }
 
-    protected virtual void TakeDamage()
+    protected virtual void TakeDamage(float dmg)
     {
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name.ToUpper().Contains("SHIP") && col.gameObject.GetComponent<HeroController>())
+        {
+            col.gameObject.GetComponent<HeroController>().TakeDamage(Damage);
+            TakeDamage(Hp);
+        }
     }
 }

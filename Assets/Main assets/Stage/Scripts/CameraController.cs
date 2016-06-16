@@ -10,19 +10,19 @@ public class CameraController : MonoBehaviour
 	void Update ()
     {
         GameObject gmobj = GameObject.FindGameObjectWithTag("PlayerShip");
-        if (gmobj && this.GetComponent<Camera>().WorldToScreenPoint(gmobj.transform.position).x < DeltaWidth)
+        if (gmobj && this.GetComponent<Camera>().WorldToScreenPoint(gmobj.transform.position).x < Screen.width/2 +10)
         {
             this.transform.position -= new Vector3(Time.deltaTime * Speed, 0, 0);
         }
-        if (gmobj && this.GetComponent<Camera>().WorldToScreenPoint(gmobj.transform.position).x > Screen.width - DeltaWidth)
+        if (gmobj && this.GetComponent<Camera>().WorldToScreenPoint(gmobj.transform.position).x > Screen.width / 2 - 10)
         {
             this.transform.position += new Vector3(Time.deltaTime * Speed, 0, 0);
         }
-        if (gmobj && this.GetComponent<Camera>().WorldToScreenPoint(gmobj.transform.position).y < DeltaHeight)
+        if (gmobj && this.GetComponent<Camera>().WorldToScreenPoint(gmobj.transform.position).y < Screen.height / 2 + 10)
         {
             this.transform.position -= new Vector3(0, 0, Time.deltaTime * Speed);
         }
-        if (gmobj && this.GetComponent<Camera>().WorldToScreenPoint(gmobj.transform.position).y > Screen.height - DeltaHeight)
+        if (gmobj && this.GetComponent<Camera>().WorldToScreenPoint(gmobj.transform.position).y > Screen.height / 2 - 10)
         {
             this.transform.position += new Vector3(0, 0, Time.deltaTime * Speed);
         }

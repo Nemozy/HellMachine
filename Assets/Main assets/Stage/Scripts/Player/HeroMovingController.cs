@@ -3,12 +3,17 @@ using System.Collections;
 
 public class HeroMovingController : MonoBehaviour
 {
-    private float Gasoline = 1000;
+    public bool LEFT = false;
+    public bool RIGHT = false;
+    public bool GAS = false;
     private float MAX_SPEED = 0.4f;
     private float Speed = 0f;
     const float DeltaSpeed = 0.15f;
-    const float RotationSpeed = 85f;
+    const float DeltaSpeedStop = 0.35f;
+    const float RotationSpeed = 115f;
     private Animator anim;
+    public Vector3 MovePos;
+    private bool StartMove = false;
 
 	void Start () 
     {
@@ -19,8 +24,8 @@ public class HeroMovingController : MonoBehaviour
     {
         if (!GameObject.Find("Terrain").GetComponent<StageEnvironment>().GetPauseState())
         {
-            #region Управление
-            if (Input.GetKey(KeyCode.W) && Gasoline > 0)
+            #region Управление клавиатурой
+            if ((Input.GetKey(KeyCode.W) || GAS) && this.gameObject.GetComponent<HeroController>().GetGas() > 0)
             {
                 if (Speed < MAX_SPEED)
                 {
@@ -28,26 +33,61 @@ public class HeroMovingController : MonoBehaviour
                 }
             }
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || LEFT)
             {
                 transform.Rotate(Vector3.forward * RotationSpeed * Time.deltaTime);
             }
 
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || RIGHT)
             {
                 transform.Rotate(Vector3.forward * -RotationSpeed * Time.deltaTime);
             }
 
-            if ((Speed > 0 && !Input.GetKey(KeyCode.W)) || Gasoline <= 0)
+            if ((Speed > 0 && !Input.GetKey(KeyCode.W) && !StartMove && !GAS) || this.gameObject.GetComponent<HeroController>().GetGas() <= 0)
             {
-                Speed = Speed - DeltaSpeed * Time.deltaTime < 0 ? 0 : Speed - DeltaSpeed * Time.deltaTime;
+                Speed = Speed - DeltaSpeedStop * Time.deltaTime < 0 ? 0 : Speed - DeltaSpeedStop * Time.deltaTime;
             }
             #endregion Управление
 
-            anim.SetFloat("Speed", Speed);
-            Gasoline -= Speed;
-            this.transform.position += new Vector3(this.transform.up.x, this.transform.up.y, this.transform.up.z) * Speed;
+            #region Управление мышью
+            if (Input.GetMouseButtonDown(0) && !GameObject.Find("Player").GetComponent<PlayerController>().MouseOverGUI)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                Physics.Raycast(ray, out hit);
+                MovePos = hit.point;
+                MovePos.y = this.transform.position.y;
+                StartMove = true;
+            }
+            if (StartMove)
+            {
+                if (Vector3.Distance(MovePos, this.transform.position) > 5 && this.gameObject.GetComponent<HeroController>().GetGas() > 0 && Speed < MAX_SPEED)
+                {
+                    Speed = Speed + DeltaSpeed * Time.deltaTime > MAX_SPEED ? MAX_SPEED : Speed + DeltaSpeed;
+                }
+                if (this.gameObject.GetComponent<HeroController>().GetGas() > 0)
+                {
+                    this.transform.LookAt(MovePos);
+                    this.transform.Rotate(90, 0, 0);
+                    if (this.transform.position.x - MovePos.x > -1 && this.transform.position.x - MovePos.x < 1 &&
+                        this.transform.position.z - MovePos.z > -1 && this.transform.position.z - MovePos.z < 1)
+                    {
+                        StartMove = false;
+                    }
+                }
+                else
+                {
+                    StartMove = false;
+                }
+            }
+            #endregion Управление мышью
 
+            anim.SetFloat("Speed", Speed);
+            this.gameObject.GetComponent<HeroController>().RemoveGas(Speed);
+            this.transform.position += new Vector3(this.transform.up.x, this.transform.up.y, this.transform.up.z) * Speed;
+            if (Speed == 0)
+                this.gameObject.GetComponent<HeroController>().RegenerationGas(Time.deltaTime);
+            
             #region Вылеты за экран
             Map map = GameObject.Find("Terrain").GetComponent<StageEnvironment>().GetMap();
 
@@ -69,46 +109,33 @@ public class HeroMovingController : MonoBehaviour
             }
             #endregion Вылеты за экран
         }
-	}
+    }
 
-    void OnCollisionEnter(Collision col)
+    public bool InverseParameter(string param)
     {
-        if (col.gameObject.name.ToUpper().Contains("METEOROID") || col.gameObject.name.ToUpper().Contains("ALIEN"))
+        switch (param)
         {
-            this.gameObject.SetActive(false);
-
-            for (int i = 0; i < 6; i++)
-            {
-                float rot = Random.Range(0f, 360f);
-                GameObject enemy = Instantiate((GameObject)Resources.Load("Enemies/Meteoroids/Meteoroid_1/" +
-                        GameObject.Find("TopPanel").transform.Find("SettingsWindow").Find("GraphMode").GetComponent<UnityEngine.UI.Dropdown>().captionText.text + "/Model/Meteoroid")) as GameObject;
-                enemy.transform.SetParent(GameObject.Find("Enemies").transform);
-                enemy.name = "Meteoroid_Crash";
-                enemy.transform.localScale *= Random.Range(0.30f, 0.70f);
-                enemy.transform.position = this.gameObject.transform.position;
-                if (GameObject.Find("TopPanel").transform.Find("SettingsWindow").Find("GraphMode").GetComponent<UnityEngine.UI.Dropdown>().captionText.text.Equals("3D"))
-                    enemy.transform.Rotate(90, rot, 0);
-                else
-                    enemy.transform.Rotate(rot, 0, 0);
-                enemy.transform.GetComponent<Meteoroid>().Init(0.05f);
-            }
-
-            GameObject.Find("Terrain").GetComponent<StageEnvironment>().GameOver();
+            case "Gas":
+                return GAS = !GAS;
+            case "Left":
+                return LEFT = !LEFT;
+            case "Right":
+                return RIGHT = !RIGHT;
+            default:
+                return false;
         }
     }
 
-    public float GetGasoline()
+    public void GoLeft(bool param)
     {
-        return Gasoline;
+        LEFT = param;
     }
-
-    public void AddGasoline(float value)
+    public void GoRight(bool param)
     {
-        Gasoline += value;
+        RIGHT = param;
     }
-
-    public void SetFixGasoline(float value)
+    public void GoGas(bool param)
     {
-        Gasoline = value;
+        GAS = param;
     }
 }

@@ -25,10 +25,9 @@ public class BonusCreator : MonoBehaviour
                                                         GameObject.Find("Player").transform.Find("Ship").transform.position.z + Random.Range(-20,20));
 
                 int val = Random.Range(0,3);
-                Debug.Log(val);
                 GameObject.Find("Interface").transform.Find("Message").GetComponent<MessageController>().SetMessage("Bonus spawn");
                 GameObject.Find("Interface").transform.Find("Message").GetComponent<MessageController>().Show(2);
-                bonus.transform.GetComponent<BonusController>().Gasoline = Random.Range(100, 500);
+                bonus.transform.GetComponent<BonusController>().Gasoline = Random.Range(100, 300);
                 switch (val)
                 {
                     case 0:

@@ -6,6 +6,7 @@ public class Unions
     public enum BulletType
     {
         Bullet,
-        Laser
+        Laser,
+        Bomb
     }
 }

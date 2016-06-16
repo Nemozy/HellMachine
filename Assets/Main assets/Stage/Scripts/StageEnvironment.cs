@@ -9,7 +9,7 @@ public class StageEnvironment : MonoBehaviour
     private bool _PAUSE = false;                        // пауза?
     private float PauseTime = 0;                        // pause time (общее время всех пауз)
     private float PauseCurrentTime = 0;                 // pause time (время текущей паузы)
-    private Map MainMap;
+    private Map MainMap;                                // игровая карта
 
 	void Start ()
     {
